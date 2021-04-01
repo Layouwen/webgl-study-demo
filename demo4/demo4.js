@@ -18,6 +18,7 @@ const gl = canvas.getContext('webgl')
 const vsSource = document.querySelector('#vertexShader').innerHTML
 const fsSource = document.querySelector('#fragmentShader').innerHTML
 
+// 初始化
 initShaders(gl, vsSource, fsSource)
 
 // 模拟 Css 颜色
