@@ -20,6 +20,7 @@ const rgbaCss = 'rgba(255, 100, 0)'
 const color = new Color(rgbaCss)
 
 !(function ani() {
+  // 颜色便宜
   color.offsetHSL(0.005, 0, 0)
   // 设置颜色
   gl.clearColor(color.r, color.g, color.b, 1)
