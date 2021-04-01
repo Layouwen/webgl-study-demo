@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo5</title>
+    <link rel="stylesheet" href="../reset.css" />
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <!-- *********************** -->
+    <!-- 添加顶点着色器 -->
+    <script id="vertexShader" type="x-shader/x-vertex">
+      // 定义变量
+      attribute vec4 a_Position;
+      attribute float a_PointSize;
+
+      void main(){
+        // 控制点位
+        gl_Position = a_Position;
+        // 控制大小
+        gl_PointSize = a_PointSize;
+      }
+    </script>
+    <!-- 添加片元着色器 -->
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      void main(){
+        gl_FragColor = vec4(1, 1, 0, 1);
+      }
+    </script>
+    <!-- *********************** -->
+    <script type="module" src="./demo5.js"></script>
+  </body>
+</html>
